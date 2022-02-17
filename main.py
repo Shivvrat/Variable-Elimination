@@ -12,7 +12,8 @@ except:
     print("You have given less arguments")
     print("The code to run the algorithm :-")
     print("python main.py <uai_file_name> <evidence_file_name>")
-
+    uai_file_name = str(arguments[1])
+    evidence_file_name = str(arguments[2])
 
 def main():
     """

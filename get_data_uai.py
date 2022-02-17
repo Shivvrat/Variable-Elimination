@@ -1,3 +1,4 @@
+import numpy as np
 def get_uai_data(file_name):
     """
     Creates all the variables that will be needed for variable elimination method from the uai file
@@ -70,6 +71,9 @@ def get_uai_data(file_name):
                         function_number = function_number + 1
                         distribution_array.append(current_table)
                         current_table = []
+        # var_in_clique = np.array(var_in_clique)#, dtype=object)
+        # distribution_array = np.array(distribution_array, dtype=object)
+
         return num_of_var, cardinalities, num_of_cliques, num_of_var_in_clique, var_in_clique, distribution_array
     except:
         print("The directory for the uai file is not correct, please check.")

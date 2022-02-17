@@ -1,8 +1,8 @@
-from math import log10
+from numpy import log10
 import get_data_uai
 import get_evidence_data
 import helper
-
+import numpy as np
 
 def variable_elimination(uai_file_name, evidence_file_name):
     """
@@ -63,4 +63,4 @@ def variable_elimination(uai_file_name, evidence_file_name):
 
 
 if __name__ == "__main__":
-    print(variable_elimination("homework2_files/BN_69.uai", "homework2_files/BN_69.uai.evid"))
+    print(variable_elimination("./get_uai_format/MN-max-neighbour-5.uai", "./get_uai_format/MN-max-neighbour-5.uai.evid"))

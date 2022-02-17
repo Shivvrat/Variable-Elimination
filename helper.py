@@ -106,7 +106,7 @@ def instantiate(num_of_var, evidence, cardinalities, var_in_clique, distribution
                 var_in_clique = list(var_in_clique)
                 val = list(var_in_clique[each_clique]).index(variable)
                 # deleting the evidence variable from the array
-                var_in_clique[each_clique] = numpy.ndarray.tolist(numpy.delete(var_in_clique[each_clique], val))
+                var_in_clique[each_clique] = numpy.delete(var_in_clique[each_clique], val)
                 num_of_var[each_clique] -= 1
                 # removing the values that does not correspond with the evidence
                 distribution_array[each_clique] = list(filter(lambda a: a != -1, distribution_array[each_clique]))
